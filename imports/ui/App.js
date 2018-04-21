@@ -1,5 +1,3 @@
-/* global id */
-
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Meteor } from 'meteor/meteor';
@@ -8,6 +6,9 @@ import { Recipes } from '../api/recipes.js';
 import Recipe from './Recipe.js';
 import AccountsUIWrapper from './AccountsUIWrapper.js';
 import TopMenu from './TopMenu.js';
+import TodaysMenu from './TodaysMenu.js';
+import RecipesBook from './RecipesBook.js';
+
 
 // App component - represents the whole app
 class App extends Component {
@@ -61,6 +62,8 @@ class App extends Component {
         </header>
 
         <AccountsUIWrapper />
+        <TodaysMenu />
+        <RecipesBook />
 
         { this.props.currentUser ?
           <form className="new-recipe" onSubmit={this.handleSubmit.bind(this)} >

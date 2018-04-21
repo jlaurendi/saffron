@@ -19,20 +19,22 @@ export default class TopMenu extends Component {
 
     renderMenuLists(){
 		return this.getMenuLists().map((list) => (
-	        <li className="list-item" key={list._id} onClick={this.setTab}><a>{list.text}</a></li>
+	        <li className="list-item" key={list._id} data-id={list._id} onClick={this.setTab}><a>{list.text}</a></li>
 		));
 	}
 
-	setTab(e) {
-		let id = e.target.key;
+	setTab() {
+		let id = event.target.getAttribute('data-id');
 		alert(id);
 	}
 
 	render() {
 	    return (
 			<div id="top-menu">
-				<li className="logo">Saffron</li>
-				{this.renderMenuLists()}
+				<a className="logo">Saffron</a>
+				<ul className="menu">
+					{this.renderMenuLists()}
+				</ul>
 				{this.state.selectedTab}
 	     	</div>
 	    );

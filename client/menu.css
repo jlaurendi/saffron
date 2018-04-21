@@ -1,9 +1,16 @@
+$primary-color: #FFC107;
+
 #top-menu{
 	.logo{
-
+		text-align: left;
+	}
+	.menu{
+		text-align: right;
+		background-color: $primary-color;
+		color: white;
 	}
 	.list-item{
-		
+		display: inline-block;
 	}
 	
 }
