@@ -36,6 +36,8 @@
         ]
       }
     },
-    "excludedPackages": ["juliancwirko:s-alert"]
+    "excludedPackages": [
+      "juliancwirko:s-alert"
+    ]
   }
 }
